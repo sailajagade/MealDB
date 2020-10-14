@@ -1,0 +1,66 @@
+.div-Background
+{
+    background-color: #B8B8B8;
+}
+.maindiv{
+    display:inline
+}
+.margin{
+    margin-left:'5px';
+    color:black;
+    font-style: oblique;
+    font-family: sans-serif;
+    
+}
+.marginTop{
+    margin-top:'50px'
+}
+.textAlign
+{
+    text-align:center
+}
+.mealAlign
+{
+    background-color: #C11B17;
+    margin-bottom: 30px;
+    height: 100px;
+    padding-top: 10px;
+    text-decoration-color: black;
+    }
+.IngredientsMargin
+{
+    margin-top: "50px";
+    text-align: center;
+}
+#inputbox{
+    font-size: 20px;
+    padding: 16.5px 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #666;
+    background: #fff;
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+.searchMargin
+{
+    margin-top: 50px;
+    
+}
+.align{
+    
+text-align: right;
+}
+.IngredientsMargin{
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-left: 0px;   
+}
+.container
+{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.InstructionsMargin{
+    margin-top: 70px;
+}
