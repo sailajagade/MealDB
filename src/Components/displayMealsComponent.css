@@ -13,7 +13,8 @@
     
 }
 .marginTop{
-    margin-top:'50px'
+  font-size: 60px;
+  color: #C11B17;
 }
 .textAlign
 {
@@ -27,11 +28,7 @@
     padding-top: 10px;
     text-decoration-color: black;
     }
-.IngredientsMargin
-{
-    margin-top: "50px";
-    text-align: center;
-}
+
 #inputbox{
     font-size: 20px;
     padding: 16.5px 20px;
@@ -44,7 +41,7 @@
 }
 .searchMargin
 {
-    margin-top: 50px;
+    margin-top: 20px;
     
 }
 .align{
@@ -52,9 +49,11 @@
 text-align: right;
 }
 .IngredientsMargin{
-    margin-top: 50px;
+    /* margin-top: 50px;
     margin-right: 0px;
-    margin-left: 0px;   
+    margin-left: 0px;  */
+    /* text-align: right;  */
+    color: green; 
 }
 .container
 {

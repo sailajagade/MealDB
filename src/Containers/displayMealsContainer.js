@@ -46,7 +46,6 @@ class displayMealsContainer extends Component {
     const selectedMeal = {
       meals: [event],
     };
-    console.log(event);
     this.setState({ showIngredient: true, randomMealData: selectedMeal });
   };
 
@@ -54,54 +53,60 @@ class displayMealsContainer extends Component {
     const { randomMealData, showIngredient } = this.state;
     return (
       <div>
-        <div class="textAlign mealAlign">
-          <h2 class="margin">
-            <b>TheMealDB</b>
-          </h2>
-        </div>
         <div class="container">
-          <div class="align">
-            {" "}
-            <input
-              id="inputbox"
-              placeholder=" Search Meals"
-              onKeyUp={(event) => this.onSearchEnter(event)}
-            />
+          <div class="row searchMargin">
+            <div class=" col-lg-5 marginTop">
+              <b>TheMealDB</b>
+            </div>
+            <div class=" col-lg-6 align">
+              {" "}
+              <input
+                id="inputbox"
+                placeholder=" Search Meals"
+                onKeyUp={(event) => this.onSearchEnter(event)}
+              />
+            </div>
           </div>
+          {!showIngredient ? (
+            <div class="row">
+              <h3 class="textAlign IngredientsMargin">
+                <b>Click on the image for Ingredients and Recepie</b>
+              </h3>
+            </div>
+          ) : (
+            ""
+          )}
+
           {randomMealData &&
             randomMealData.meals &&
             randomMealData.meals.map((mealInfo, index) => (
               <div>
-                <div class="row col-md-12 col-lg-12">
-                  <div class="col-md-5 col-lg-5">
-                    <DisplayMealsComponent
-                      mealInfo={mealInfo}
-                      onMealSearch={this.onMealSearch}
-                      onMealSelect={this.onMealSelect}
-                      showIngredient={showIngredient}
-                    />
-                  </div>
+                <div class="col-md-4 col-lg-4">
+                  <DisplayMealsComponent
+                    mealInfo={mealInfo}
+                    onMealSearch={this.onMealSearch}
+                    onMealSelect={this.onMealSelect}
+                    showIngredient={showIngredient}
+                  />
+                </div>
 
-                  <div class="col-md-7 col-lg-7">
-                    {showIngredient ? (
+                {showIngredient ? (
+                  <div>
+                    <div class="col-md-7 col-lg-7">
                       <DisplayIngredients
                         mealInfo={mealInfo}
                         onMealSearch={this.onMealSearch}
                         onMealSelect={this.onMealSelect}
                       />
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                </div>
-                {showIngredient ? (
-                  <div class="container  ">
-                    <h2 class="textAlign InstructionsMargin ">Instructions</h2>
+                    </div>
+                    <div class="textAlign">
+                      <h2>Instructions</h2>
+                    </div>
                     {mealInfo.strInstructions}
-                    <h4 class="textAlign InstructionsMargin ">
+                    <h4 class="textAlign searchMargin">
                       <b>Visit: </b>
 
-                      {mealInfo.strYoutube}
+                      <a href={mealInfo.strYoutube}> {mealInfo.strYoutube}</a>
                     </h4>
                   </div>
                 ) : (
